@@ -1,22 +1,22 @@
-# 🛠 Daily System Backup Automation Script
+# Daily System Backup Automation Script
 
-## 📋 Overview
+## Overview
 
 This project contains a Bash script that automates daily backups for a specified directory. The script compresses the backups, rotates old backups and logs, and sends failure alerts using Postfix if anything goes wrong.
 
 ---
 
-## 📁 What This Script Does
+## What This Script Does
 
-- 📦 **Backs up** a specified directory (e.g., `/etc`, `/var/www`) in `.tar.gz` format.
-- 💾 **Stores** the backups in a defined backup directory.
-- 🔁 **Rotates** old backups and logs based on configurable retention settings.
-- 📧 **Sends an email alert** using Postfix if any part of the backup fails.
-- ⏰ **Scheduled daily** using a cron job.
+- Backs up a specified directory (e.g., `/etc`, `/var/www`) in `.tar.gz` format.
+- Stores the backups in a defined backup directory.
+- Rotates old backups and logs based on configurable retention settings.
+- Sends an email alert using Postfix if any part of the backup fails.
+- Scheduled daily using a cron job.
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 Edit the script and set the following variables at the top:
 
@@ -32,9 +32,9 @@ EMAIL_TO="admin@example.com"     # Recipient of failure alerts
 
 ---
 
-## 🚀 How to Run and Test the Script
+## How to Run and Test the Script
 
-### 🧪 Manual Test
+### Manual Test
 
 1. Make the script executable:
    ```bash
@@ -53,7 +53,7 @@ EMAIL_TO="admin@example.com"     # Recipient of failure alerts
 
 ---
 
-## 🔄 Cron Job Setup
+## Cron Job Setup
 
 To schedule the backup daily at 2 AM:
 
@@ -69,7 +69,7 @@ crontab -e
 
 ---
 
-## 🛠 How to Configure Paths and Retention
+## How to Configure Paths and Retention
 
 You can change the source folder, destination path, number of retained backups/logs, and email recipient by editing the variables at the top of the script.
 
@@ -84,7 +84,7 @@ EMAIL_TO="you@domain.com"
 
 ---
 
-## 🧪 How to Test Failure Alerts
+## How to Test Failure Alerts
 
 You can simulate a failure to ensure the alert system works:
 
@@ -108,21 +108,8 @@ Check your mail with:
 mail
 ```
 
-> **Note:** Ensure Postfix is installed and configured to send local emails:
+Note: Ensure Postfix is installed and configured to send local emails:
+
 ```bash
 sudo apt install postfix
 ```
-
----
-
-## 📁 Repository Structure
-
-```
-.
-├── backup.sh
-├── README.md
-```
-
----
-
-Let me know if you'd like me to generate the actual `backup.sh` script too or help you structure the GitHub repo.
